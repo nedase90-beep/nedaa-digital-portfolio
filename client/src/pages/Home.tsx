@@ -25,7 +25,7 @@ import {
   X,
 } from "lucide-react";
 
-const GAME_SRC = "/game/snake-maze.html";
+const GAME_SRC = "./game/snake-maze.html";
 
 const visualAssets = [
   { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_01_5b17e9a2.jpg", title: "مشهد بصري", label: "تصميم بصري" },
@@ -185,10 +185,6 @@ function Home() {
             <div className="hero-kicker"><span className="kicker-dot" /> NEDAA ABU SALEH / 2026</div>
             <h1>أصنع مساحة تجعل <em>التقنية</em> مفهومة… وملهمة.</h1>
             <p className="hero-lead">أنا نداء أبو صالح، مدرّبة مهارات رقمية أصنع محتوى تعليميًا وإبداعيًا يقرّب التقنية من الإنسان، ويحوّل الفكرة إلى تجربة قابلة للتعلّم، والمشاركة، والنمو.</p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#work">استكشف الأعمال <ArrowDown size={17} /></a>
-              <a className="button button-ghost" href="#game">جرّب اللعبة <Gamepad2 size={16} /></a>
-            </div>
             <div className="hero-signature"><span>رحلة تعلم مدى الحياة</span><div className="signature-line" /><Heart size={14} fill="currentColor" /></div>
           </div>
           <div className="hero-visual reveal-up delay-1">
