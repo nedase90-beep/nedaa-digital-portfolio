@@ -298,7 +298,9 @@ button { font: inherit; }
 .learning-preview figcaption { position: absolute; z-index: 1; right: 20px; bottom: 18px; left: 20px; display: grid; gap: 4px; color: white; }
 .learning-preview figcaption span { color: #e7c681; font: 9px 'Manrope', sans-serif; }
 .learning-preview figcaption b { font-size: 12px; }
-.story-document { position: absolute; overflow: hidden; width: 235px; margin: 0; border-radius: 10px; background: #fff; box-shadow: 15px 20px 0 rgba(20,62,64,.1); }
+.story-document { position: absolute; overflow: hidden; width: 235px; margin: 0; border-radius: 10px; background: #fff; color: var(--navy); text-decoration: none; box-shadow: 15px 20px 0 rgba(20,62,64,.1); transition: transform .25s var(--ease-out), box-shadow .25s ease; }
+.story-document:hover { box-shadow: 18px 25px 0 rgba(20,62,64,.08), 0 18px 28px rgba(59,36,86,.16); }
+.story-document:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
 .story-document img { display: block; width: 100%; height: 300px; object-fit: cover; object-position: top; }
 .story-document figcaption { display: grid; gap: 3px; padding: 10px 13px 12px; color: var(--navy); }
 .story-document figcaption span { color: var(--teal-dark); font: 9px 'Manrope', sans-serif; }
