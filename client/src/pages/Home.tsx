@@ -28,35 +28,35 @@ import {
 const GAME_SRC = "/game/snake-maze.html";
 
 const visualAssets = [
-  { src: "/manus-storage/image_01_5b17e9a2.jpg", title: "مشهد بصري", label: "تصميم بصري" },
-  { src: "/manus-storage/image_02_6876b33e.jpg", title: "لقطة إبداعية", label: "هوية بصرية" },
-  { src: "/manus-storage/image_03_2a82386a.jpeg", title: "تعبيرات شخصية", label: "تطوير شخصيات" },
-  { src: "/manus-storage/image_04_7759ccd8.jpeg", title: "شخصية تلوّح", label: "تطوير شخصيات" },
-  { src: "/manus-storage/image_05_428f6528.jpeg", title: "لوحة تعليمية", label: "Storytelling" },
-  { src: "/manus-storage/image_08_18a5a373.png", title: "رحلة عبر الزمن", label: "لوحة قصصية" },
-  { src: "/manus-storage/image_11_c43cb989.png", title: "فنجان قهوة مسكوب", label: "توليد إبداعي" },
-  { src: "/manus-storage/image_12_2a348436.png", title: "إعلان القلم الذكي", label: "محتوى ترويجي" },
-  { src: "/manus-storage/image_06_626d6ac0.gif", title: "مشهد صحراء متحرك", label: "حركة" },
-  { src: "/manus-storage/image_07_8eb3173d.jpeg", title: "لوحة القلم الذكي", label: "Storyboard" },
-  { src: "/manus-storage/image_09_f98ea861.png", title: "تجربة مرئية", label: "تصميم" },
-  { src: "/manus-storage/image_10_2577478f.png", title: "لوحة شخصية", label: "تطوير شخصيات" },
-  { src: "/manus-storage/image_13_98314956.png", title: "بطاقة تعريفية", label: "بطاقة" },
-  { src: "/manus-storage/image_14_4fa6801c.png", title: "قبل", label: "تجربة بصرية" },
-  { src: "/manus-storage/image_15_08cf9364.png", title: "كاراكتر شيت", label: "شخصية" },
-  { src: "/manus-storage/image_16_aa57e535.png", title: "مخطط عمل الغريبة", label: "مخطط بصري" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_01_5b17e9a2.jpg", title: "مشهد بصري", label: "تصميم بصري" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_02_6876b33e.jpg", title: "لقطة إبداعية", label: "هوية بصرية" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_03_2a82386a.jpeg", title: "تعبيرات شخصية", label: "تطوير شخصيات" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_04_7759ccd8.jpeg", title: "شخصية تلوّح", label: "تطوير شخصيات" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_05_428f6528.jpeg", title: "لوحة تعليمية", label: "Storytelling" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_08_18a5a373.png", title: "رحلة عبر الزمن", label: "لوحة قصصية" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_11_c43cb989.png", title: "فنجان قهوة مسكوب", label: "توليد إبداعي" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_12_2a348436.png", title: "إعلان القلم الذكي", label: "محتوى ترويجي" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_06_626d6ac0.gif", title: "مشهد صحراء متحرك", label: "حركة" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_07_8eb3173d.jpeg", title: "لوحة القلم الذكي", label: "Storyboard" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_09_f98ea861.png", title: "تجربة مرئية", label: "تصميم" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_10_2577478f.png", title: "لوحة شخصية", label: "تطوير شخصيات" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_13_98314956.png", title: "بطاقة تعريفية", label: "بطاقة" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_14_4fa6801c.png", title: "قبل", label: "تجربة بصرية" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_15_08cf9364.png", title: "كاراكتر شيت", label: "شخصية" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/image_16_aa57e535.png", title: "مخطط عمل الغريبة", label: "مخطط بصري" },
 ];
 
 const mediaAssets = [
-  { src: "/manus-storage/video_17_5cac44ed.mp4", title: "مشهد تاريخي متحرك", label: "فيديو" },
-  { src: "/manus-storage/video_18_5323fe98.mp4", title: "القلم الذكي", label: "فيديو منتج" },
-  { src: "/manus-storage/video_19_bc63bdda.mp4", title: "TextFlow", label: "فيديو ترويجي" },
-  { src: "/manus-storage/video_23_7fd9e7ac.mp4", title: "إعلان العطر والشمع", label: "إعلان" },
-  { src: "/manus-storage/video_24_17bef03b.mp4", title: "أهمية الأكل الصحي", label: "توعية" },
-  { src: "/manus-storage/video_26_974e80b5.mp4", title: "علاقتك مع أبنائك", label: "توعية أسرية" },
-  { src: "/manus-storage/video_20_5bbffee1.mp4", title: "مشهد قصير", label: "فيديو" },
-  { src: "/manus-storage/video_21_93e41d12.mp4", title: "لقطة واتساب 01", label: "فيديو قصير" },
-  { src: "/manus-storage/video_22_aa434ead.mp4", title: "لقطة واتساب 02", label: "فيديو قصير" },
-  { src: "/manus-storage/video_25_1c63a10a.mp4", title: "جمال العطر", label: "إعلان" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_17_5cac44ed.mp4", title: "مشهد تاريخي متحرك", label: "فيديو" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_18_5323fe98.mp4", title: "القلم الذكي", label: "فيديو منتج" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_19_bc63bdda.mp4", title: "TextFlow", label: "فيديو ترويجي" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_23_7fd9e7ac.mp4", title: "إعلان العطر والشمع", label: "إعلان" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_24_17bef03b.mp4", title: "أهمية الأكل الصحي", label: "توعية" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_26_974e80b5.mp4", title: "علاقتك مع أبنائك", label: "توعية أسرية" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_20_5bbffee1.mp4", title: "مشهد قصير", label: "فيديو" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_21_93e41d12.mp4", title: "لقطة واتساب 01", label: "فيديو قصير" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_22_aa434ead.mp4", title: "لقطة واتساب 02", label: "فيديو قصير" },
+  { src: "https://nedaadigpor-tqk3gboy.manus.space/manus-storage/video_25_1c63a10a.mp4", title: "جمال العطر", label: "إعلان" },
 ];
 
 const files = {
@@ -121,7 +121,7 @@ function openLink(href: string) {
 function AppMark() {
   return (
     <div className="brand-avatar" aria-label="شخصية نداء أبو صالح الكرتونية">
-      <img src="/manus-storage/nedaa-teacher_e5a23f5d.png" alt="معلمة محجبة داخل غرفة صفية" />
+      <img src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/nedaa-teacher_e5a23f5d.png" alt="معلمة محجبة داخل غرفة صفية" />
     </div>
   );
 }
@@ -192,7 +192,7 @@ function Home() {
             <div className="hero-signature"><span>رحلة تعلم مدى الحياة</span><div className="signature-line" /><Heart size={14} fill="currentColor" /></div>
           </div>
           <div className="hero-visual reveal-up delay-1">
-            <div className="tech-orb-stage"><div className="orb-halo" /><img className="hero-teacher" src="/manus-storage/nedaa-teacher_e5a23f5d.png" alt="معلمة محجبة تقف داخل غرفة صفية" /><img className="tech-orb" src="/manus-storage/tech_orb_ce04b3a3.png" alt="عنصر ثلاثي الأبعاد يرمز للتقنية والتعليم" /><span className="orb-ring orb-ring-one" /><span className="orb-ring orb-ring-two" /><span className="orb-caption">LEARN · CREATE · IMPACT</span></div>
+            <div className="tech-orb-stage"><div className="orb-halo" /><img className="hero-teacher" src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/nedaa-teacher_e5a23f5d.png" alt="معلمة محجبة تقف داخل غرفة صفية" /><img className="tech-orb" src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/tech_orb_ce04b3a3.png" alt="عنصر ثلاثي الأبعاد يرمز للتقنية والتعليم" /><span className="orb-ring orb-ring-one" /><span className="orb-ring orb-ring-two" /><span className="orb-caption">LEARN · CREATE · IMPACT</span></div>
             <div className="hero-floating-card hero-floating-card-top"><Sparkles size={17} /><div><strong>تعلّم بذكاء</strong><span>تبسيط · تطبيق · أثر</span></div></div>
             <div className="hero-floating-card hero-floating-card-bottom"><span className="mini-orbit"><BrainCircuit size={17} /></span><div><strong>09</strong><span>سنوات في التعليم</span></div></div>
             <div className="hero-vertical-label">DIGITAL SKILLS · EDUCATION · AI</div>
@@ -242,14 +242,14 @@ function Home() {
       </section>
 
       <section className="section learning-lab-section" id="education">
-        <div className="container learning-lab-layout"><div className="learning-lab-copy"><span className="eyebrow">04 / مشروع تعليمي</span><h2>المعرفة حين تصبح <em>مرئية.</em></h2><p>عرض «التشريح البشري — خريطة الحياة داخلنا» نموذج على تبسيط موضوع معرفي عبر تسلسل بصري يساعد المتعلم على الفهم والتذكر.</p><div className="learning-tags"><span>شرح بصري</span><span>تبسيط المعرفة</span><span>محتوى تدريبي</span></div></div><figure className="learning-preview"><img src="/manus-storage/anatomy_10b4646b.png" alt="معاينة عرض التشريح البشري" /><figcaption><span>عرض تعليمي</span><b>التشريح البشري — خريطة الحياة داخلنا</b></figcaption></figure></div>
+        <div className="container learning-lab-layout"><div className="learning-lab-copy"><span className="eyebrow">04 / مشروع تعليمي</span><h2>المعرفة حين تصبح <em>مرئية.</em></h2><p>عرض «التشريح البشري — خريطة الحياة داخلنا» نموذج على تبسيط موضوع معرفي عبر تسلسل بصري يساعد المتعلم على الفهم والتذكر.</p><div className="learning-tags"><span>شرح بصري</span><span>تبسيط المعرفة</span><span>محتوى تدريبي</span></div></div><figure className="learning-preview"><img src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/anatomy_10b4646b.png" alt="معاينة عرض التشريح البشري" /><figcaption><span>عرض تعليمي</span><b>التشريح البشري — خريطة الحياة داخلنا</b></figcaption></figure></div>
       </section>
 
       <section className="section literary-section" id="literary">
         <div className="container">
           <SectionHeading kicker="04 / أعمالي الأدبية" title="من قصة مكتوبة إلى منتج رقمي له حياة." copy="القصص ليست ملفات ساكنة؛ يمكن تطويرها إلى كتب إلكترونية، تجارب تفاعلية، حزم تعليمية، وورش إبداعية قابلة للبيع أو الترخيص." />
           <div className="literary-layout">
-            <div className="story-showcase"><a className="story-document story-document-main" href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/sama-silver-mystery_412b49f9.pdf" target="_self" aria-label="فتح قصة سما واللغز الفضي"><img src="/manus-storage/story-sama_b85a70b7.png" alt="معاينة قصة سما واللغز الفضي" /><figcaption><span>قصة رقمية · افتح الملف</span><b>سما واللغز الفضي</b></figcaption></a><a className="story-document story-document-back" href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/letters-story_2c124f8b.pdf" target="_self" aria-label="فتح قصة الحروف"><img src="/manus-storage/story-letters_2bd67654.png" alt="معاينة قصة الحروف" /><figcaption><span>تعلم بالقصص · افتح الملف</span><b>قصة الحروف</b></figcaption></a></div>
+            <div className="story-showcase"><a className="story-document story-document-main" href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/sama-silver-mystery_412b49f9.pdf" target="_self" aria-label="فتح قصة سما واللغز الفضي"><img src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/story-sama_b85a70b7.png" alt="معاينة قصة سما واللغز الفضي" /><figcaption><span>قصة رقمية · افتح الملف</span><b>سما واللغز الفضي</b></figcaption></a><a className="story-document story-document-back" href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/letters-story_2c124f8b.pdf" target="_self" aria-label="فتح قصة الحروف"><img src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/story-letters_2bd67654.png" alt="معاينة قصة الحروف" /><figcaption><span>تعلم بالقصص · افتح الملف</span><b>قصة الحروف</b></figcaption></a></div>
             <div className="product-paths"><div className="product-path"><span>01</span><div><b>كتاب إلكتروني مصوّر</b><p>نسخة مرتبة للقراءة، مع غلاف، صفحات داخلية، ووصف بيع واضح.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>02</span><div><b>قصة تفاعلية</b><p>اختيارات، أصوات، حركة، وأسئلة تجعل القارئ جزءًا من الحكاية.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>03</span><div><b>حزمة صفية للمعلمين</b><p>قصة مع نشاطات وأسئلة وأوراق عمل قابلة للاستخدام في التدريب.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>04</span><div><b>ورشة كتابة رقمية</b><p>تحويل تجربة نداء في التعليم إلى ورشة عملية لصناعة قصة تعليمية.</p></div><ArrowUpRight size={16} /></div></div>
           </div>
         </div>
@@ -260,7 +260,7 @@ function Home() {
       </section>
 
       <section className="section media-section" id="media">
-        <div className="container"><SectionHeading kicker="06 / الفيديو والصوت" title="محتوى يتحرك مع الفكرة." copy="فيديوهات قصيرة، إعلانات، ومشاهد توعوية معروضة داخل الصفحة لتشاهدها مباشرة دون مغادرة الموقع." /><div className="media-grid">{mediaAssets.map((asset) => <article className="media-card" key={asset.src}><div className="media-frame"><video src={asset.src} controls preload="metadata" playsInline /></div><div className="media-card-meta"><span>{asset.label}</span><b>{asset.title}</b><a href={asset.src.replace('/manus-storage/', 'https://nedaadigpor-tqk3gboy.manus.space/manus-storage/')} target="_self" rel="noreferrer">فتح الملف <ArrowUpRight size={12} /></a></div></article>)}</div><div className="audio-strip"><div className="audio-icon"><MonitorPlay size={18} /></div><div><span>صوت يرافق الفكرة</span><b>Persuasive Outbound Sales — تسجيل صوتي</b><a href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/audi_27_9df06019.mp3" target="_self" rel="noreferrer">فتح الملف الصوتي <ArrowUpRight size={12} /></a></div><audio controls preload="metadata" src="/manus-storage/audi_27_9df06019.mp3" /></div></div>
+        <div className="container"><SectionHeading kicker="06 / الفيديو والصوت" title="محتوى يتحرك مع الفكرة." copy="فيديوهات قصيرة، إعلانات، ومشاهد توعوية معروضة داخل الصفحة لتشاهدها مباشرة دون مغادرة الموقع." /><div className="media-grid">{mediaAssets.map((asset) => <article className="media-card" key={asset.src}><div className="media-frame"><video src={asset.src} controls preload="metadata" playsInline /></div><div className="media-card-meta"><span>{asset.label}</span><b>{asset.title}</b><a href={asset.src.replace('/manus-storage/', 'https://nedaadigpor-tqk3gboy.manus.space/manus-storage/')} target="_self" rel="noreferrer">فتح الملف <ArrowUpRight size={12} /></a></div></article>)}</div><div className="audio-strip"><div className="audio-icon"><MonitorPlay size={18} /></div><div><span>صوت يرافق الفكرة</span><b>Persuasive Outbound Sales — تسجيل صوتي</b><a href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/audi_27_9df06019.mp3" target="_self" rel="noreferrer">فتح الملف الصوتي <ArrowUpRight size={12} /></a></div><audio controls preload="metadata" src="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/audi_27_9df06019.mp3" /></div></div>
       </section>
 
       <section className="section game-section" id="game">
