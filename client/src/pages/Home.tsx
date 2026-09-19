@@ -120,9 +120,8 @@ function openLink(href: string) {
 
 function AppMark() {
   return (
-    <div className="brand-mark" aria-label="نداء أبو صالح">
-      <span>ن</span>
-      <i />
+    <div className="brand-avatar" aria-label="شخصية نداء أبو صالح الكرتونية">
+      <img src="/manus-storage/nedaa-teacher_e5a23f5d.png" alt="معلمة محجبة داخل غرفة صفية" />
     </div>
   );
 }
