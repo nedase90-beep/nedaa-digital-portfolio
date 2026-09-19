@@ -61,45 +61,45 @@ const mediaAssets = [
 
 const files = {
   education: [
-    { name: "التشريح البشري - خريطة الحياة داخلنا.pptx", href: "#gallery", label: "عرض تعليمي" },
+    { name: "التشريح البشري - خريطة الحياة داخلنا.pptx", href: "/manus-storage/anatomy-human-map_001d45ef.pptx", label: "عرض تعليمي · افتح الملف" },
   ],
   interactive: [
-    { name: "snake-maze (1).html", href: "#gallery", label: "لعبة HTML" },
-    { name: "snakemaze-mobile.zip", href: "#gallery", label: "نسخة موبايل" },
-    { name: "سما واللغز الفضي (1).pdf", href: "#gallery", label: "قصة رقمية" },
-    { name: "غلاف القصة.pdf", href: "#gallery", label: "غلاف قصصي" },
-    { name: "قصة الحروف", href: "#gallery", label: "تعلم بالقصص" },
+    { name: "snake-maze (1).html", href: "/manus-storage/snake-maze-original_31bb03a6.html", label: "لعبة HTML · افتح الملف" },
+    { name: "snakemaze-mobile.zip", href: "/manus-storage/snakemaze-mobile_b92854fc.zip", label: "نسخة موبايل · تحميل الملف" },
+    { name: "سما واللغز الفضي (1).pdf", href: "/manus-storage/sama-silver-mystery_412b49f9.pdf", label: "قصة رقمية · افتح الملف" },
+    { name: "غلاف القصة.pdf", href: "/manus-storage/story-cover_f89556b7.pdf", label: "غلاف قصصي · افتح الملف" },
+    { name: "قصة الحروف", href: "/manus-storage/letters-story_2c124f8b.pdf", label: "تعلم بالقصص · افتح الملف" },
   ],
   visual: [
-    { name: "0b942b6f57609bd37e8358ddcf032ec8.jpg", href: "#gallery", label: "تصميم بصري" },
-    { name: "563fcfd2-3f8a-4f60-b995-385205c0dcf2.jpg", href: "#gallery", label: "تصميم بصري" },
-    { name: "Character facial expression sheet", href: "#gallery", label: "تطوير شخصيات" },
-    { name: "Character waving and smiling", href: "#gallery", label: "تطوير شخصيات" },
-    { name: "d04c22d4-aff9-4d35-81d1-697ee67dcc97.png", href: "#gallery", label: "لوحة بصرية" },
-    { name: "download (8).png", href: "#gallery", label: "تصميم بصري" },
-    { name: "download (9).png", href: "#gallery", label: "تصميم بصري" },
-    { name: "Girl traveling through time", href: "#gallery", label: "لوحة قصصية" },
-    { name: "Naya animates historical desert", href: "#gallery", label: "مشهد متحرك" },
-    { name: "Student using smart pen storyboard", href: "#gallery", label: "لوحة قصصية" },
-    { name: "uni-1.1-max — فنجان قهوة مسكوب", href: "#gallery", label: "تصميم توليدي" },
-    { name: "إعلان القلم الذكي", href: "#gallery", label: "إعلان بصري" },
-    { name: "بطاقة تعريفية", href: "#gallery", label: "بطاقة" },
-    { name: "قبل", href: "#gallery", label: "تجربة بصرية" },
-    { name: "كاراكتر شيت للشخصية", href: "#gallery", label: "تطوير شخصية" },
-    { name: "مخطط تفصيلي لعمل الغريبة", href: "#gallery", label: "مخطط بصري" },
+    { name: "0b942b6f57609bd37e8358ddcf032ec8.jpg", href: "/manus-storage/image_01_5b17e9a2.jpg", label: "تصميم بصري · افتح الصورة" },
+    { name: "563fcfd2-3f8a-4f60-b995-385205c0dcf2.jpg", href: "/manus-storage/image_02_6876b33e.jpg", label: "تصميم بصري · افتح الصورة" },
+    { name: "Character facial expression sheet", href: "/manus-storage/image_03_2a82386a.jpeg", label: "تطوير شخصيات · افتح الصورة" },
+    { name: "Character waving and smiling", href: "/manus-storage/image_04_7759ccd8.jpeg", label: "تطوير شخصيات · افتح الصورة" },
+    { name: "d04c22d4-aff9-4d35-81d1-697ee67dcc97.png", href: "/manus-storage/image_05_428f6528.jpeg", label: "لوحة بصرية · افتح الصورة" },
+    { name: "download (8).png", href: "/manus-storage/image_06_626d6ac0.gif", label: "تصميم بصري · افتح الصورة" },
+    { name: "download (9).png", href: "/manus-storage/image_07_8eb3173d.jpeg", label: "تصميم بصري · افتح الصورة" },
+    { name: "Girl traveling through time", href: "/manus-storage/image_08_18a5a373.png", label: "لوحة قصصية · افتح الصورة" },
+    { name: "Naya animates historical desert", href: "/manus-storage/image_09_f98ea861.png", label: "مشهد متحرك · افتح الصورة" },
+    { name: "Student using smart pen storyboard", href: "/manus-storage/image_10_2577478f.png", label: "لوحة قصصية · افتح الصورة" },
+    { name: "uni-1.1-max — فنجان قهوة مسكوب", href: "/manus-storage/image_11_c43cb989.png", label: "تصميم توليدي · افتح الصورة" },
+    { name: "إعلان القلم الذكي", href: "/manus-storage/image_12_2a348436.png", label: "إعلان بصري · افتح الصورة" },
+    { name: "بطاقة تعريفية", href: "/manus-storage/image_13_98314956.png", label: "بطاقة · افتح الصورة" },
+    { name: "قبل", href: "/manus-storage/image_14_4fa6801c.png", label: "تجربة بصرية · افتح الصورة" },
+    { name: "كاراكتر شيت للشخصية", href: "/manus-storage/image_15_08cf9364.png", label: "تطوير شخصية · افتح الصورة" },
+    { name: "مخطط تفصيلي لعمل الغريبة", href: "/manus-storage/image_16_aa57e535.png", label: "مخطط بصري · افتح الصورة" },
   ],
   media: [
-    { name: "Naya animates historical desert", href: "#gallery", label: "فيديو" },
-    { name: "Person using smart scanning pen", href: "#gallery", label: "فيديو" },
-    { name: "TextFlow promotional video", href: "#gallery", label: "فيديو ترويجي" },
-    { name: "Untitled Scene", href: "#gallery", label: "مشهد" },
-    { name: "WhatsApp Video — 09:26", href: "#gallery", label: "فيديو قصير" },
-    { name: "WhatsApp Video — 09:27", href: "#gallery", label: "فيديو قصير" },
-    { name: "إعلان للعطر والشمع", href: "#gallery", label: "إعلان" },
-    { name: "أهمية الأكل الصحي", href: "#gallery", label: "توعية" },
-    { name: "جمال العطر", href: "#gallery", label: "إعلان" },
-    { name: "علاقتك مع أبناءك", href: "#gallery", label: "توعية أسرية" },
-    { name: "Persuasive Outbound Sales", href: "#gallery", label: "تسجيل صوتي" },
+    { name: "Naya animates historical desert", href: "/manus-storage/video_17_5cac44ed.mp4", label: "فيديو · شغّل الملف" },
+    { name: "Person using smart scanning pen", href: "/manus-storage/video_18_5323fe98.mp4", label: "فيديو · شغّل الملف" },
+    { name: "TextFlow promotional video", href: "/manus-storage/video_19_bc63bdda.mp4", label: "فيديو ترويجي · شغّل الملف" },
+    { name: "Untitled Scene", href: "/manus-storage/video_20_5bbffee1.mp4", label: "مشهد · شغّل الملف" },
+    { name: "WhatsApp Video — 09:26", href: "/manus-storage/video_21_93e41d12.mp4", label: "فيديو قصير · شغّل الملف" },
+    { name: "WhatsApp Video — 09:27", href: "/manus-storage/video_22_aa434ead.mp4", label: "فيديو قصير · شغّل الملف" },
+    { name: "إعلان للعطر والشمع", href: "/manus-storage/video_23_7fd9e7ac.mp4", label: "إعلان · شغّل الملف" },
+    { name: "أهمية الأكل الصحي", href: "/manus-storage/video_24_17bef03b.mp4", label: "توعية · شغّل الملف" },
+    { name: "جمال العطر", href: "/manus-storage/video_25_1c63a10a.mp4", label: "إعلان · شغّل الملف" },
+    { name: "علاقتك مع أبناءك", href: "/manus-storage/video_26_974e80b5.mp4", label: "توعية أسرية · شغّل الملف" },
+    { name: "Persuasive Outbound Sales", href: "/manus-storage/audi_27_9df06019.mp3", label: "تسجيل صوتي · شغّل الملف" },
   ],
 } as const;
 
@@ -249,7 +249,7 @@ function Home() {
         <div className="container">
           <SectionHeading kicker="04 / أعمالي الأدبية" title="من قصة مكتوبة إلى منتج رقمي له حياة." copy="القصص ليست ملفات ساكنة؛ يمكن تطويرها إلى كتب إلكترونية، تجارب تفاعلية، حزم تعليمية، وورش إبداعية قابلة للبيع أو الترخيص." />
           <div className="literary-layout">
-            <div className="story-showcase"><a className="story-document story-document-main" href="/manus-storage/sama-silver-mystery_412b49f9.pdf" target="_self" aria-label="فتح قصة سما واللغز الفضي"><img src="/manus-storage/story-sama_b85a70b7.png" alt="معاينة قصة سما واللغز الفضي" /><figcaption><span>قصة رقمية · افتح الملف</span><b>سما واللغز الفضي</b></figcaption></a><a className="story-document story-document-back" href="/manus-storage/letters-story_2c124f8b.pdf" target="_self" aria-label="فتح قصة الحروف"><img src="/manus-storage/story-letters_2bd67654.png" alt="معاينة قصة الحروف" /><figcaption><span>تعلم بالقصص · افتح الملف</span><b>قصة الحروف</b></figcaption></a></div>
+            <div className="story-showcase"><a className="story-document story-document-main" href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/sama-silver-mystery_412b49f9.pdf" target="_self" aria-label="فتح قصة سما واللغز الفضي"><img src="/manus-storage/story-sama_b85a70b7.png" alt="معاينة قصة سما واللغز الفضي" /><figcaption><span>قصة رقمية · افتح الملف</span><b>سما واللغز الفضي</b></figcaption></a><a className="story-document story-document-back" href="https://nedaadigpor-tqk3gboy.manus.space/manus-storage/letters-story_2c124f8b.pdf" target="_self" aria-label="فتح قصة الحروف"><img src="/manus-storage/story-letters_2bd67654.png" alt="معاينة قصة الحروف" /><figcaption><span>تعلم بالقصص · افتح الملف</span><b>قصة الحروف</b></figcaption></a></div>
             <div className="product-paths"><div className="product-path"><span>01</span><div><b>كتاب إلكتروني مصوّر</b><p>نسخة مرتبة للقراءة، مع غلاف، صفحات داخلية، ووصف بيع واضح.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>02</span><div><b>قصة تفاعلية</b><p>اختيارات، أصوات، حركة، وأسئلة تجعل القارئ جزءًا من الحكاية.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>03</span><div><b>حزمة صفية للمعلمين</b><p>قصة مع نشاطات وأسئلة وأوراق عمل قابلة للاستخدام في التدريب.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>04</span><div><b>ورشة كتابة رقمية</b><p>تحويل تجربة نداء في التعليم إلى ورشة عملية لصناعة قصة تعليمية.</p></div><ArrowUpRight size={16} /></div></div>
           </div>
         </div>
