@@ -25,51 +25,81 @@ import {
   X,
 } from "lucide-react";
 
-const DRIVE_ROOT = "https://drive.google.com/drive/folders/1l79gT2dwQRlN8BZliQlB0qYqCnfVKpHP";
-const PDF_LINK = "https://drive.google.com/file/d/1pDvCS4LfFFtY_hR_YKFFGcvPhwjnV8f1/view?usp=drivesdk";
-const DOC_LINK = "https://docs.google.com/document/d/1RZhDcI7hLFbzKb841StyFxR5odnrTY71swo3ygzsddE/edit?usp=drivesdk";
+const GAME_SRC = "/game/snake-maze.html";
+
+const visualAssets = [
+  { src: "/manus-storage/image_01_5b17e9a2.jpg", title: "مشهد بصري", label: "تصميم بصري" },
+  { src: "/manus-storage/image_02_6876b33e.jpg", title: "لقطة إبداعية", label: "هوية بصرية" },
+  { src: "/manus-storage/image_03_2a82386a.jpeg", title: "تعبيرات شخصية", label: "تطوير شخصيات" },
+  { src: "/manus-storage/image_04_7759ccd8.jpeg", title: "شخصية تلوّح", label: "تطوير شخصيات" },
+  { src: "/manus-storage/image_05_428f6528.jpeg", title: "لوحة تعليمية", label: "Storytelling" },
+  { src: "/manus-storage/image_08_18a5a373.png", title: "رحلة عبر الزمن", label: "لوحة قصصية" },
+  { src: "/manus-storage/image_11_c43cb989.png", title: "فنجان قهوة مسكوب", label: "توليد إبداعي" },
+  { src: "/manus-storage/image_12_2a348436.png", title: "إعلان القلم الذكي", label: "محتوى ترويجي" },
+  { src: "/manus-storage/image_06_626d6ac0.gif", title: "مشهد صحراء متحرك", label: "حركة" },
+  { src: "/manus-storage/image_07_8eb3173d.jpeg", title: "لوحة القلم الذكي", label: "Storyboard" },
+  { src: "/manus-storage/image_09_f98ea861.png", title: "تجربة مرئية", label: "تصميم" },
+  { src: "/manus-storage/image_10_2577478f.png", title: "لوحة شخصية", label: "تطوير شخصيات" },
+  { src: "/manus-storage/image_13_98314956.png", title: "بطاقة تعريفية", label: "بطاقة" },
+  { src: "/manus-storage/image_14_4fa6801c.png", title: "قبل", label: "تجربة بصرية" },
+  { src: "/manus-storage/image_15_08cf9364.png", title: "كاراكتر شيت", label: "شخصية" },
+  { src: "/manus-storage/image_16_aa57e535.png", title: "مخطط عمل الغريبة", label: "مخطط بصري" },
+];
+
+const mediaAssets = [
+  { src: "/manus-storage/video_17_5cac44ed.mp4", title: "مشهد تاريخي متحرك", label: "فيديو" },
+  { src: "/manus-storage/video_18_5323fe98.mp4", title: "القلم الذكي", label: "فيديو منتج" },
+  { src: "/manus-storage/video_19_bc63bdda.mp4", title: "TextFlow", label: "فيديو ترويجي" },
+  { src: "/manus-storage/video_23_7fd9e7ac.mp4", title: "إعلان العطر والشمع", label: "إعلان" },
+  { src: "/manus-storage/video_24_17bef03b.mp4", title: "أهمية الأكل الصحي", label: "توعية" },
+  { src: "/manus-storage/video_26_974e80b5.mp4", title: "علاقتك مع أبنائك", label: "توعية أسرية" },
+  { src: "/manus-storage/video_20_5bbffee1.mp4", title: "مشهد قصير", label: "فيديو" },
+  { src: "/manus-storage/video_21_93e41d12.mp4", title: "لقطة واتساب 01", label: "فيديو قصير" },
+  { src: "/manus-storage/video_22_aa434ead.mp4", title: "لقطة واتساب 02", label: "فيديو قصير" },
+  { src: "/manus-storage/video_25_1c63a10a.mp4", title: "جمال العطر", label: "إعلان" },
+];
 
 const files = {
   education: [
-    { name: "التشريح البشري - خريطة الحياة داخلنا.pptx", href: "https://drive.google.com/file/d/1trTpcFdsE7rBpl6r1lM0TH2AXOHj4tWZ/view?usp=drivesdk", label: "عرض تعليمي" },
+    { name: "التشريح البشري - خريطة الحياة داخلنا.pptx", href: "#gallery", label: "عرض تعليمي" },
   ],
   interactive: [
-    { name: "snake-maze (1).html", href: "https://drive.google.com/file/d/1I-G8cCPPN8Lj5l9yaOTWmUJEaTMkbpu_/view?usp=drivesdk", label: "لعبة HTML" },
-    { name: "snakemaze-mobile.zip", href: "https://drive.google.com/file/d/1tNUfOkRclwLLyFAABRW7ZkDxHsQPtKQN/view?usp=drivesdk", label: "نسخة موبايل" },
-    { name: "سما واللغز الفضي (1).pdf", href: "https://drive.google.com/file/d/1RU2l6got6e02ieYC2JLukD3BSx2yKINw/view?usp=drivesdk", label: "قصة رقمية" },
-    { name: "غلاف القصة.pdf", href: "https://drive.google.com/file/d/1eqqLP3pQAzJsf1EKs6FJP0ke7dWRjfyG/view?usp=drivesdk", label: "غلاف قصصي" },
-    { name: "قصة الحروف", href: "https://drive.google.com/file/d/1JJPy7VTHaTwjTcPlnWoTMVizUOCZ4ZU4/view?usp=drivesdk", label: "تعلم بالقصص" },
+    { name: "snake-maze (1).html", href: "#gallery", label: "لعبة HTML" },
+    { name: "snakemaze-mobile.zip", href: "#gallery", label: "نسخة موبايل" },
+    { name: "سما واللغز الفضي (1).pdf", href: "#gallery", label: "قصة رقمية" },
+    { name: "غلاف القصة.pdf", href: "#gallery", label: "غلاف قصصي" },
+    { name: "قصة الحروف", href: "#gallery", label: "تعلم بالقصص" },
   ],
   visual: [
-    { name: "0b942b6f57609bd37e8358ddcf032ec8.jpg", href: "https://drive.google.com/file/d/1PYr2UbgcNXAMe3Lsu5mAHS6DiwghF7-4/view?usp=drivesdk", label: "تصميم بصري" },
-    { name: "563fcfd2-3f8a-4f60-b995-385205c0dcf2.jpg", href: "https://drive.google.com/file/d/1A-7Pt65QKBagr2M9kYK9jEHPoYis9kvw/view?usp=drivesdk", label: "تصميم بصري" },
-    { name: "Character facial expression sheet", href: "https://drive.google.com/file/d/1-5eD2VMIgMJEFc_yAN42wZ_0zq1ZuMmA/view?usp=drivesdk", label: "تطوير شخصيات" },
-    { name: "Character waving and smiling", href: "https://drive.google.com/file/d/1DQvpcgFUrJCe-Fc77q0tsGKtmbT7tCfF/view?usp=drivesdk", label: "تطوير شخصيات" },
-    { name: "d04c22d4-aff9-4d35-81d1-697ee67dcc97.png", href: "https://drive.google.com/file/d/1hIBSNVh7HbIPtNFwelkMmi2DGAlXbyoD/view?usp=drivesdk", label: "لوحة بصرية" },
-    { name: "download (8).png", href: "https://drive.google.com/file/d/1WAMxXb6CFOfS589UPSFXBGbLQJDTbhv3/view?usp=drivesdk", label: "تصميم بصري" },
-    { name: "download (9).png", href: "https://drive.google.com/file/d/16gSpBnJ_XHEGf63TZrR41wMYQvplYQX3/view?usp=drivesdk", label: "تصميم بصري" },
-    { name: "Girl traveling through time", href: "https://drive.google.com/file/d/14pUoNOABTUSrNN1rjQ7KPdpjpsYws29-/view?usp=drivesdk", label: "لوحة قصصية" },
-    { name: "Naya animates historical desert", href: "https://drive.google.com/file/d/1VJIytrT_PfQJYK1GdbFOkOWAIPlaxhhM/view?usp=drivesdk", label: "مشهد متحرك" },
-    { name: "Student using smart pen storyboard", href: "https://drive.google.com/file/d/1F3-mjv1feDbPx2C6VxIotrZ2hm-NPFy5/view?usp=drivesdk", label: "لوحة قصصية" },
-    { name: "uni-1.1-max — فنجان قهوة مسكوب", href: "https://drive.google.com/file/d/1WYpDTJjEwePewJGLJy3l3MNT8Vkhx7CN/view?usp=drivesdk", label: "تصميم توليدي" },
-    { name: "إعلان القلم الذكي", href: "https://drive.google.com/file/d/1qkqlp6AmGvINikyXIfo2r3fvIrb_orc9/view?usp=drivesdk", label: "إعلان بصري" },
-    { name: "بطاقة تعريفية", href: "https://drive.google.com/file/d/13AZZOWnB63ku8jP3KikPkxTpxKgRDkUp/view?usp=drivesdk", label: "بطاقة" },
-    { name: "قبل", href: "https://drive.google.com/file/d/1FpkbjDgS2FQQ0oZveFJAp0kz_TjXB31O/view?usp=drivesdk", label: "تجربة بصرية" },
-    { name: "كاراكتر شيت للشخصية", href: "https://drive.google.com/file/d/1B3yogtpaMLDZGAwqeD475UcSUzhSknso/view?usp=drivesdk", label: "تطوير شخصية" },
-    { name: "مخطط تفصيلي لعمل الغريبة", href: "https://drive.google.com/file/d/1UHyQAigUy3imWNuImRO_batKkPgLdOaw/view?usp=drivesdk", label: "مخطط بصري" },
+    { name: "0b942b6f57609bd37e8358ddcf032ec8.jpg", href: "#gallery", label: "تصميم بصري" },
+    { name: "563fcfd2-3f8a-4f60-b995-385205c0dcf2.jpg", href: "#gallery", label: "تصميم بصري" },
+    { name: "Character facial expression sheet", href: "#gallery", label: "تطوير شخصيات" },
+    { name: "Character waving and smiling", href: "#gallery", label: "تطوير شخصيات" },
+    { name: "d04c22d4-aff9-4d35-81d1-697ee67dcc97.png", href: "#gallery", label: "لوحة بصرية" },
+    { name: "download (8).png", href: "#gallery", label: "تصميم بصري" },
+    { name: "download (9).png", href: "#gallery", label: "تصميم بصري" },
+    { name: "Girl traveling through time", href: "#gallery", label: "لوحة قصصية" },
+    { name: "Naya animates historical desert", href: "#gallery", label: "مشهد متحرك" },
+    { name: "Student using smart pen storyboard", href: "#gallery", label: "لوحة قصصية" },
+    { name: "uni-1.1-max — فنجان قهوة مسكوب", href: "#gallery", label: "تصميم توليدي" },
+    { name: "إعلان القلم الذكي", href: "#gallery", label: "إعلان بصري" },
+    { name: "بطاقة تعريفية", href: "#gallery", label: "بطاقة" },
+    { name: "قبل", href: "#gallery", label: "تجربة بصرية" },
+    { name: "كاراكتر شيت للشخصية", href: "#gallery", label: "تطوير شخصية" },
+    { name: "مخطط تفصيلي لعمل الغريبة", href: "#gallery", label: "مخطط بصري" },
   ],
   media: [
-    { name: "Naya animates historical desert", href: "https://drive.google.com/file/d/1rwoMjj71kk7AnJB2sTWECcsP5TMhhZ14/view?usp=drivesdk", label: "فيديو" },
-    { name: "Person using smart scanning pen", href: "https://drive.google.com/file/d/1zxfOtfOVT_EXuMUG1NZ1PPuoJwvK6H3r/view?usp=drivesdk", label: "فيديو" },
-    { name: "TextFlow promotional video", href: "https://drive.google.com/file/d/133sbDNF5XHE1R5Ygh2DxmJdN4BNfoLYC/view?usp=drivesdk", label: "فيديو ترويجي" },
-    { name: "Untitled Scene", href: "https://drive.google.com/file/d/1uvQn3GwgLECHdRseEJfgYng0qMBgF5Cz/view?usp=drivesdk", label: "مشهد" },
-    { name: "WhatsApp Video — 09:26", href: "https://drive.google.com/file/d/18i8p9ayG3J84xfyUjFvV3KoDWoP8-Zau/view?usp=drivesdk", label: "فيديو قصير" },
-    { name: "WhatsApp Video — 09:27", href: "https://drive.google.com/file/d/1ScUUqcEjxMMjifOHwdwhL1HlGqxw1U4w/view?usp=drivesdk", label: "فيديو قصير" },
-    { name: "إعلان للعطر والشمع", href: "https://drive.google.com/file/d/1JvufuckJVrv0BTiTC-18iqwb6ZfjDFxK/view?usp=drivesdk", label: "إعلان" },
-    { name: "أهمية الأكل الصحي", href: "https://drive.google.com/file/d/1jyVa9xWSVX3TTZzv8weUkK7hGG7HeJMp/view?usp=drivesdk", label: "توعية" },
-    { name: "جمال العطر", href: "https://drive.google.com/file/d/13kOlfV-gkelScfVfeYE_3INs8qjvP2K-/view?usp=drivesdk", label: "إعلان" },
-    { name: "علاقتك مع أبناءك", href: "https://drive.google.com/file/d/1jJ5dWQ4gDf5RsbSJYmf5TLc0-SHs-7S1/view?usp=drivesdk", label: "توعية أسرية" },
-    { name: "Persuasive Outbound Sales", href: "https://drive.google.com/file/d/1sW-GVWa9zNAikidAj8B6g2N2yI-6I3rW/view?usp=drivesdk", label: "تسجيل صوتي" },
+    { name: "Naya animates historical desert", href: "#gallery", label: "فيديو" },
+    { name: "Person using smart scanning pen", href: "#gallery", label: "فيديو" },
+    { name: "TextFlow promotional video", href: "#gallery", label: "فيديو ترويجي" },
+    { name: "Untitled Scene", href: "#gallery", label: "مشهد" },
+    { name: "WhatsApp Video — 09:26", href: "#gallery", label: "فيديو قصير" },
+    { name: "WhatsApp Video — 09:27", href: "#gallery", label: "فيديو قصير" },
+    { name: "إعلان للعطر والشمع", href: "#gallery", label: "إعلان" },
+    { name: "أهمية الأكل الصحي", href: "#gallery", label: "توعية" },
+    { name: "جمال العطر", href: "#gallery", label: "إعلان" },
+    { name: "علاقتك مع أبناءك", href: "#gallery", label: "توعية أسرية" },
+    { name: "Persuasive Outbound Sales", href: "#gallery", label: "تسجيل صوتي" },
   ],
 } as const;
 
@@ -142,7 +172,7 @@ function Home() {
             <a href="#experience" onClick={() => setMenuOpen(false)}>الخبرة</a>
             <a href="#work" onClick={() => setMenuOpen(false)}>الأعمال</a>
             <a href="#contact" onClick={() => setMenuOpen(false)}>تواصل</a>
-            <a className="nav-cta" href={PDF_LINK} target="_blank" rel="noreferrer">الحقيبة المهنية <ArrowUpRight size={15} /></a>
+            <a className="nav-cta" href="#work" onClick={() => setMenuOpen(false)}>أعمالي الرقمية <ArrowUpRight size={15} /></a>
           </nav>
         </div>
       </header>
@@ -155,15 +185,15 @@ function Home() {
           <div className="hero-copy reveal-up">
             <div className="hero-kicker"><span className="kicker-dot" /> NEDAA ABU SALEH / 2026</div>
             <h1>أصنع مساحة تجعل <em>التقنية</em> مفهومة… وملهمة.</h1>
-            <p className="hero-lead">أنا نداء، مدرّبة مهارات رقمية أؤمن أن التعليم الحقيقي لا يكتفي بنقل المعلومة؛ بل يفتح للمتعلّم بابًا جديدًا ليجرّب، ويبتكر، ويثق بقدرته.</p>
+            <p className="hero-lead">أنا نداء أبو صالح، مدرّبة مهارات رقمية أصنع محتوى تعليميًا وإبداعيًا يقرّب التقنية من الإنسان، ويحوّل الفكرة إلى تجربة قابلة للتعلّم، والمشاركة، والنمو.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">استكشف الأعمال <ArrowDown size={17} /></a>
-              <a className="button button-ghost" href={DRIVE_ROOT} target="_blank" rel="noreferrer">افتح الحقيبة على Drive <ExternalLink size={16} /></a>
+              <a className="button button-ghost" href="#game">جرّب اللعبة <Gamepad2 size={16} /></a>
             </div>
             <div className="hero-signature"><span>رحلة تعلم مدى الحياة</span><div className="signature-line" /><Heart size={14} fill="currentColor" /></div>
           </div>
           <div className="hero-visual reveal-up delay-1">
-            <div className="hero-image-frame"><div className="hero-image" /><div className="hero-image-shade" /></div>
+            <div className="tech-orb-stage"><div className="orb-halo" /><img className="tech-orb" src="/manus-storage/tech_orb_ce04b3a3.png" alt="عنصر ثلاثي الأبعاد يرمز للتقنية والتعليم" /><span className="orb-ring orb-ring-one" /><span className="orb-ring orb-ring-two" /><span className="orb-caption">LEARN · CREATE · IMPACT</span></div>
             <div className="hero-floating-card hero-floating-card-top"><Sparkles size={17} /><div><strong>تعلّم بذكاء</strong><span>تبسيط · تطبيق · أثر</span></div></div>
             <div className="hero-floating-card hero-floating-card-bottom"><span className="mini-orbit"><BrainCircuit size={17} /></span><div><strong>09</strong><span>سنوات في التعليم</span></div></div>
             <div className="hero-vertical-label">DIGITAL SKILLS · EDUCATION · AI</div>
@@ -184,7 +214,7 @@ function Home() {
             <SectionHeading kicker="01 / من أنا" title="التعليم عندي ليس وظيفة؛ إنه طريقة لرؤية العالم." copy="كل تجربة تعليمية أقدّمها تبدأ من سؤال بسيط: كيف أجعل هذه الفكرة أقرب، أوضح، وأكثر قابلية لأن تُستخدم في الحياة؟" />
             <div className="about-body-grid">
               <div className="quote-card"><Quote size={28} /><p>طموحي دوماً أن أزداد علماً، وأن أفيد بعلمي غيري، وأن يكون تطوري مدى الحياة.</p><span>— نداء أبو صالح</span></div>
-              <div className="about-text"><p>بدأت رحلتي مع التعليم عبر المراحل الدراسية المختلفة، ثم اتسعت لتشمل لغات البرمجة الأساسية، وحقيبة ICDL، والعمل الإداري داخل البيئة المدرسية، والتدريب عبر المنصات الإلكترونية.</p><p>اليوم أعمل مدرّبة مهارات رقمية في مؤسسة التدريب المهني، وأطوّر خبرتي في الذكاء الاصطناعي لأصنع محتوى يقرّب التقنية من الناس، ويمنحهم خطوات عملية قابلة للتطبيق.</p><a className="text-link" href={DOC_LINK} target="_blank" rel="noreferrer">اقرأ النسخة الكاملة من الحقيبة <MoveUpRight size={15} /></a></div>
+              <div className="about-text"><p>بدأت رحلتي مع التعليم عبر المراحل الدراسية المختلفة، ثم اتسعت لتشمل لغات البرمجة الأساسية، وحقيبة ICDL، والعمل الإداري داخل البيئة المدرسية، والتدريب عبر المنصات الإلكترونية.</p><p>اليوم أعمل مدرّبة مهارات رقمية في مؤسسة التدريب المهني، وأطوّر خبرتي في الذكاء الاصطناعي لأصنع محتوى يقرّب التقنية من الناس، ويمنحهم خطوات عملية قابلة للتطبيق.</p><a className="text-link" href="#work">شاهد كيف تتحول الأفكار إلى أعمال رقمية <MoveUpRight size={15} /></a></div>
             </div>
           </div>
         </div>
@@ -206,17 +236,43 @@ function Home() {
 
       <section id="work" className="section work-section">
         <div className="container">
-          <div className="work-header"><SectionHeading kicker="03 / الأعمال" title="أفكار تتحول إلى تجربة." copy="من عرض تعليمي إلى لعبة صغيرة أو فيديو قصير؛ هذه مكتبة حيّة لما يمكن أن يصنعه التعليم حين يلتقي بالخيال الرقمي." /><a className="button button-dark" href={DRIVE_ROOT} target="_blank" rel="noreferrer">استعرض المجلد الكامل <FolderOpen size={16} /></a></div>
+          <div className="work-header"><SectionHeading kicker="03 / الأعمال" title="أفكار تتحول إلى تجربة." copy="لا روابط خارجية هنا؛ كل مشروع يُعرض داخل الصفحة ليُرى ويُجرَّب ويُفهم كمنتج رقمي قابل للتطوير." /><a className="button button-dark" href="#game">انتقل إلى اللعبة <Gamepad2 size={16} /></a></div>
           <div className="category-tabs">{categories.map((category) => { const Icon = category.icon; return <button key={category.id} className={activeCategory === category.id ? "category-tab active" : "category-tab"} onClick={() => setActiveCategory(category.id)}><Icon size={17} /><span>{category.label}</span><b>{category.count}</b></button>; })}</div>
           <div className="portfolio-grid">{portfolioGroups.map(([key, group], index) => { const category = categories.find((item) => item.id === key); const Icon = category?.icon ?? Layers3; const visible = group.slice(0, activeCategory === "all" ? 4 : group.length); return <article className={`portfolio-group portfolio-group-${key}`} key={key}><div className="portfolio-group-head"><div className="portfolio-group-icon"><Icon size={18} /></div><div><span>{String(index + 1).padStart(2, "0")} / {category?.label}</span><h3>{key === "education" ? "المعرفة حين تصبح مرئية" : key === "interactive" ? "تعلم يتحرك ويلعب" : key === "visual" ? "لغة بصرية لها شخصية" : "رسائل قصيرة، أثر طويل"}</h3></div><b>{group.length} ملف</b></div><p className="portfolio-group-copy">{key === "education" ? "محتوى تعليمي منظّم يقرّب المفاهيم المعقدة ويجعلها قابلة للاستيعاب." : key === "interactive" ? "قصص وألعاب رقمية تمنح المتعلم مساحة للاكتشاف والتجربة." : key === "visual" ? "لوحات، بطاقات، شخصيات ومخططات تصنع هوية للمحتوى." : "فيديو وصوت يوصل الفكرة بخفة ووضوح إلى جمهور أوسع."}</p><div className="file-list">{visible.map((file) => <a className="file-row" href={file.href} target="_blank" rel="noreferrer" key={file.name}><span className="file-row-icon">{key === "media" ? <Play size={13} fill="currentColor" /> : <ArrowUpRight size={13} />}</span><span className="file-row-name">{file.name}</span><span className="file-row-label">{file.label}</span></a>)}</div>{activeCategory === "all" && group.length > 4 && <button className="see-more" onClick={() => setActiveCategory(key as CategoryId)}>عرض كل ملفات القسم <ArrowUpRight size={14} /></button>}</article>; })}</div>
         </div>
+      </section>
+
+      <section className="section learning-lab-section" id="education">
+        <div className="container learning-lab-layout"><div className="learning-lab-copy"><span className="eyebrow">04 / مشروع تعليمي</span><h2>المعرفة حين تصبح <em>مرئية.</em></h2><p>عرض «التشريح البشري — خريطة الحياة داخلنا» نموذج على تبسيط موضوع معرفي عبر تسلسل بصري يساعد المتعلم على الفهم والتذكر.</p><div className="learning-tags"><span>شرح بصري</span><span>تبسيط المعرفة</span><span>محتوى تدريبي</span></div></div><figure className="learning-preview"><img src="/manus-storage/anatomy_10b4646b.png" alt="معاينة عرض التشريح البشري" /><figcaption><span>عرض تعليمي</span><b>التشريح البشري — خريطة الحياة داخلنا</b></figcaption></figure></div>
+      </section>
+
+      <section className="section literary-section" id="literary">
+        <div className="container">
+          <SectionHeading kicker="04 / أعمالي الأدبية" title="من قصة مكتوبة إلى منتج رقمي له حياة." copy="القصص ليست ملفات ساكنة؛ يمكن تطويرها إلى كتب إلكترونية، تجارب تفاعلية، حزم تعليمية، وورش إبداعية قابلة للبيع أو الترخيص." />
+          <div className="literary-layout">
+            <div className="story-showcase"><figure className="story-document story-document-main"><img src="/manus-storage/story-sama_b85a70b7.png" alt="معاينة قصة سما واللغز الفضي" /><figcaption><span>قصة رقمية</span><b>سما واللغز الفضي</b></figcaption></figure><figure className="story-document story-document-back"><img src="/manus-storage/story-letters_2bd67654.png" alt="معاينة قصة الحروف" /><figcaption><span>تعلم بالقصص</span><b>قصة الحروف</b></figcaption></figure></div>
+            <div className="product-paths"><div className="product-path"><span>01</span><div><b>كتاب إلكتروني مصوّر</b><p>نسخة مرتبة للقراءة، مع غلاف، صفحات داخلية، ووصف بيع واضح.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>02</span><div><b>قصة تفاعلية</b><p>اختيارات، أصوات، حركة، وأسئلة تجعل القارئ جزءًا من الحكاية.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>03</span><div><b>حزمة صفية للمعلمين</b><p>قصة مع نشاطات وأسئلة وأوراق عمل قابلة للاستخدام في التدريب.</p></div><ArrowUpRight size={16} /></div><div className="product-path"><span>04</span><div><b>ورشة كتابة رقمية</b><p>تحويل تجربة نداء في التعليم إلى ورشة عملية لصناعة قصة تعليمية.</p></div><ArrowUpRight size={16} /></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section gallery-section" id="gallery">
+        <div className="container"><div className="gallery-header"><SectionHeading kicker="05 / المحتوى البصري" title="كل صورة تحمل بداية مشروع." copy="هنا تظهر التفاصيل كما هي: شخصيات، إعلانات، لوحات قصصية، وتجارب بصرية يمكن البناء عليها." /><span className="gallery-count">16<br /><small>أصل بصري</small></span></div><div className="visual-gallery">{visualAssets.map((asset, index) => <figure className={`visual-tile visual-tile-${(index % 4) + 1}`} key={asset.src}><img src={asset.src} alt={asset.title} loading="lazy" /><figcaption><span>{asset.label}</span><b>{asset.title}</b></figcaption></figure>)}</div></div>
+      </section>
+
+      <section className="section media-section" id="media">
+        <div className="container"><SectionHeading kicker="06 / الفيديو والصوت" title="محتوى يتحرك مع الفكرة." copy="فيديوهات قصيرة، إعلانات، ومشاهد توعوية معروضة داخل الصفحة لتشاهدها مباشرة دون مغادرة الموقع." /><div className="media-grid">{mediaAssets.map((asset) => <article className="media-card" key={asset.src}><div className="media-frame"><video src={asset.src} controls preload="metadata" playsInline /></div><div className="media-card-meta"><span>{asset.label}</span><b>{asset.title}</b></div></article>)}</div><div className="audio-strip"><div className="audio-icon"><MonitorPlay size={18} /></div><div><span>صوت يرافق الفكرة</span><b>Persuasive Outbound Sales — تسجيل صوتي</b></div><audio controls preload="metadata" src="/manus-storage/audi_27_9df06019.mp3" /></div></div>
+      </section>
+
+      <section className="section game-section" id="game">
+        <div className="container game-layout"><div className="game-copy"><span className="eyebrow">07 / مساحة تفاعلية</span><h2>إذا أردت مساحة للتفكير والترفيه، <em>العب هنا.</em></h2><p>لعبة Snake Maze تعمل مباشرة داخل المتصفح. تجربة صغيرة تجمع بين التركيز، الحركة، والفضول — تمامًا كما أحب أن يكون التعلم.</p><div className="game-chips"><span><Check size={14} /> تعمل داخل الموقع</span><span><Check size={14} /> مناسبة للتجربة السريعة</span></div></div><div className="game-frame"><iframe src={GAME_SRC} title="لعبة Snake Maze التفاعلية" loading="lazy" /></div></div>
       </section>
 
       <section className="section approach-section">
         <div className="container approach-layout"><div className="approach-art"><div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" /><div className="art-core"><Sparkles size={28} /></div><span className="art-label art-label-one">curiosity</span><span className="art-label art-label-two">practice</span><span className="art-label art-label-three">impact</span></div><div className="approach-content"><SectionHeading kicker="04 / فلسفة العمل" title="أدرّب العقل… وأحترم فضوله." copy="التقنية تتغير بسرعة، لكن الطريقة التي نتعلم بها تبقى إنسانية: سؤال واضح، تجربة آمنة، وتشجيع صادق على المحاولة." /><div className="principles-list"><div><span>01</span><p><b>أبسّط دون أن أُسطّح</b><small>أحوّل المصطلح إلى صورة، والخطوة إلى ممارسة.</small></p></div><div><span>02</span><p><b>أصمم للتجربة</b><small>كل فكرة أفضل حين يمكن لمسها، اختبارها، وتطويرها.</small></p></div><div><span>03</span><p><b>أتعلم باستمرار</b><small>الفضول ليس مرحلة؛ إنه أسلوب حياة ومهنة.</small></p></div></div></div></div>
       </section>
 
-      <section id="contact" className="contact-section"><div className="contact-glow" /><div className="container contact-layout"><div><span className="eyebrow">05 / لنبنِ أثرًا</span><h2>هل لديك معرفة<br /><em>تحتاج إلى مساحة؟</em></h2></div><div className="contact-copy"><p>إذا كنت تبحث عن مدرّبة مهارات رقمية تجمع بين الخبرة التعليمية، وحسّ المحتوى، وشغف الذكاء الاصطناعي؛ يسعدني أن نبدأ حوارًا.</p><a className="button button-light" href={DRIVE_ROOT} target="_blank" rel="noreferrer">افتح الحقيبة كاملة <ArrowUpRight size={17} /></a></div></div></section>
+      <section id="contact" className="contact-section"><div className="contact-glow" /><div className="container contact-layout"><div><span className="eyebrow">05 / لنبنِ أثرًا</span><h2>هل لديك معرفة<br /><em>تحتاج إلى مساحة؟</em></h2></div><div className="contact-copy"><p>إذا كنت تبحث عن مدرّبة مهارات رقمية تجمع بين الخبرة التعليمية، وحسّ المحتوى، وشغف الذكاء الاصطناعي؛ يسعدني أن نبدأ حوارًا.</p><a className="button button-light" href="#about">تعرّف على منهجي <ArrowUpRight size={17} /></a></div></div></section>
 
       <footer className="site-footer"><div className="container footer-inner"><div className="footer-brand"><AppMark /><div><strong>نداء أبو صالح</strong><span>مدرّبة مهارات رقمية</span></div></div><p>التعلم رحلة. فلنجعلها أكثر وضوحًا، ودفئًا، وإلهامًا.</p><div className="footer-links"><a href="#top">العودة للأعلى <ArrowUpRight size={14} /></a><span>© 2026</span></div></div></footer>
     </main>
