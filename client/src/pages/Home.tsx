@@ -192,7 +192,7 @@ function Home() {
             <div className="hero-signature"><span>رحلة تعلم مدى الحياة</span><div className="signature-line" /><Heart size={14} fill="currentColor" /></div>
           </div>
           <div className="hero-visual reveal-up delay-1">
-            <div className="tech-orb-stage"><div className="orb-halo" /><img className="tech-orb" src="/manus-storage/tech_orb_ce04b3a3.png" alt="عنصر ثلاثي الأبعاد يرمز للتقنية والتعليم" /><span className="orb-ring orb-ring-one" /><span className="orb-ring orb-ring-two" /><span className="orb-caption">LEARN · CREATE · IMPACT</span></div>
+            <div className="tech-orb-stage"><div className="orb-halo" /><img className="hero-teacher" src="/manus-storage/nedaa-teacher_e5a23f5d.png" alt="معلمة محجبة تقف داخل غرفة صفية" /><img className="tech-orb" src="/manus-storage/tech_orb_ce04b3a3.png" alt="عنصر ثلاثي الأبعاد يرمز للتقنية والتعليم" /><span className="orb-ring orb-ring-one" /><span className="orb-ring orb-ring-two" /><span className="orb-caption">LEARN · CREATE · IMPACT</span></div>
             <div className="hero-floating-card hero-floating-card-top"><Sparkles size={17} /><div><strong>تعلّم بذكاء</strong><span>تبسيط · تطبيق · أثر</span></div></div>
             <div className="hero-floating-card hero-floating-card-bottom"><span className="mini-orbit"><BrainCircuit size={17} /></span><div><strong>09</strong><span>سنوات في التعليم</span></div></div>
             <div className="hero-vertical-label">DIGITAL SKILLS · EDUCATION · AI</div>
