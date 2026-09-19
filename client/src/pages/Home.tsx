@@ -15,14 +15,12 @@ import {
   GraduationCap,
   Heart,
   Layers3,
-  Menu,
   MonitorPlay,
   MoveUpRight,
   Palette,
   Play,
   Quote,
   Sparkles,
-  X,
 } from "lucide-react";
 
 const GAME_SRC = "./game/snake-maze.html";
@@ -137,7 +135,6 @@ function SectionHeading({ kicker, title, copy, light = false }: { kicker: string
 }
 
 function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<CategoryId>("all");
   const [openAccordions, setOpenAccordions] = useState<Record<string, boolean>>({});
   const [scrolled, setScrolled] = useState(false);
@@ -153,26 +150,14 @@ function Home() {
     return [[activeCategory, files[activeCategory as keyof typeof files]]] as [string, readonly PortfolioFile[]][];
   }, [activeCategory]);
 
-  const toggleAccordion = (id: string) => setOpenAccordions((previous) => ({ ...previous, [id]: !previous[id] }));
-
   return (
     <main dir="rtl" className="site-shell">
       <header className={`site-nav ${scrolled ? "site-nav-scrolled" : ""}`}>
         <div className="nav-inner">
-          <a className="brand" href="#top" onClick={() => setMenuOpen(false)}>
+          <a className="brand" href="#top">
             <AppMark />
             <span className="brand-copy"><strong>نداء أبو صالح</strong><small>مدرّبة مهارات رقمية</small></span>
           </a>
-          <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="فتح القائمة">
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
-          <nav className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
-            <a href="#about" onClick={() => setMenuOpen(false)}>عن نداء</a>
-            <a href="#experience" onClick={() => setMenuOpen(false)}>الخبرة</a>
-            <a href="#work" onClick={() => setMenuOpen(false)}>الأعمال</a>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>تواصل</a>
-            <a className="nav-cta" href="#work" onClick={() => setMenuOpen(false)}>أعمالي الرقمية <ArrowUpRight size={15} /></a>
-          </nav>
         </div>
       </header>
 
